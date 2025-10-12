@@ -1,0 +1,89 @@
+/* ===== Variables ===== */
+:root{
+  --navy:#0b1d4b;
+  --blue:#1e63d3;
+  --silver:#f2f4f8;
+  --white:#ffffff;
+  --text:#061220;
+  --radius:12px;
+  --container:1100px;
+  --transition:all .4s ease;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);}
+img{max-width:100%;display:block;border-radius:var(--radius);}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+.container{max-width:var(--container);margin:0 auto;padding:0 1rem;}
+
+/* ===== Header ===== */
+.header{background:linear-gradient(90deg,var(--navy),var(--blue));color:var(--white);position:sticky;top:0;z-index:999;}
+.header-flex{display:flex;justify-content:space-between;align-items:center;padding:0.8rem 0;}
+.brand{display:flex;align-items:center;gap:10px;color:var(--white);}
+.logo{width:45px;height:45px;background:var(--silver);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;}
+.title{font-size:1rem;}
+.tagline{font-size:0.7rem;color:#e0e0e0;}
+
+.nav{display:flex;gap:16px;}
+.nav a{color:var(--silver);font-weight:600;transition:var(--transition);}
+.nav a:hover,.nav a.active{color:var(--white);}
+.nav-toggle{display:none;background:none;border:0;color:var(--white);font-size:1.5rem;}
+
+@media(max-width:800px){
+  .nav{display:none;flex-direction:column;background:var(--navy);position:absolute;top:60px;right:10px;border-radius:8px;padding:10px;}
+  .nav.show{display:flex;}
+  .nav-toggle{display:block;}
+}
+
+/* ===== Hero ===== */
+.hero{position:relative;height:70vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.overlay{position:relative;z-index:2;text-align:center;color:#fff;background:rgba(11,29,75,0.55);padding:2rem;border-radius:10px;}
+.overlay h2{font-size:2rem;margin-bottom:1rem;}
+.overlay p{max-width:600px;margin:0 auto 1rem;}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;}
+.btn{background:var(--blue);color:#fff;padding:0.6rem 1rem;border-radius:var(--radius);font-weight:600;transition:var(--transition);}
+.btn:hover{background:var(--navy);}
+.btn.alt{background:var(--white);color:var(--navy);}
+.pale{background:var(--silver);}
+
+/* ===== Sections ===== */
+.section{padding:60px 0;}
+.section-title{text-align:center;margin-bottom:1rem;color:var(--navy);}
+.intro{text-align:center;margin-bottom:1.5rem;color:#444;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;}
+.card{background:var(--white);padding:1rem;border-radius:var(--radius);box-shadow:0 4px 20px rgba(0,0,0,0.05);}
+.program-card{background:#fff;padding:1rem;border-radius:var(--radius);text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.05);}
+.program-card img{height:180px;object-fit:cover;margin-bottom:0.5rem;}
+.center{text-align:center;margin-top:1.5rem;}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.8rem;}
+
+/* CTA */
+.cta{text-align:center;}
+.cta h3{margin-bottom:0.6rem;color:var(--navy);}
+.cta p{color:#333;margin-bottom:1rem;}
+
+/* Footer */
+.footer{background:var(--navy);color:var(--silver);padding:1rem 0;}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.footer-nav a{color:var(--silver);margin-left:1rem;}
+.footer-nav a:hover{color:#fff;}
+
+/* Back to top */
+#topBtn{position:fixed;bottom:20px;right:20px;width:45px;height:45px;background:var(--blue);color:#fff;border:none;border-radius:50%;font-size:20px;display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.2);}
+#topBtn.show{display:flex;}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.delay-1{transition-delay:.15s;}
+.delay-2{transition-delay:.3s;}
+
+/* Responsive grids */
+@media(max-width:780px){
+  .grid-2{grid-template-columns:1fr;}
+}
