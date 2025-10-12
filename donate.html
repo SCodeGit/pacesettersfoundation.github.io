@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <body>
-  <!-- Fixed header: use on all pages -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate — Pacesetters Foundation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-row">
       <a href="index.html" class="brand">
@@ -18,114 +24,11 @@
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="stakeholders.html">Stakeholders</a>
-        <a href="donate.html">Donate</a>
+        <a href="donate.html" class="btn small">Donate</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main content goes here: unique per page -->
-  <main>
-    <!-- Put page-specific content here -->
-  </main>
-</body>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Donate — Pacesetters Foundation</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-row">
-      <div class="brand"><div class="logo">PF</div><div><h1 class="org-name">Pacesetters Foundation</h1></div></div>
-      <nav class="nav"><a href="index.html">Home</a><a href="donate.html" class="btn small">Donate</a><a href="contact.html">Contact</a></nav>
-      <button class="nav-toggle">☰</button>
-    </div>
-  </header>
-
-  <main class="container section">
-    <h2>Support Our Work</h2>
-    <p class="lead">Choose a convenient method to give — Bank transfer, Mobile Money (MTN, Vodafone, etc.) or Card payments.</p>
-
-    <div class="donate-tabs">
-      <button class="tab-btn active" data-tab="bank">Bank Transfer</button>
-      <button class="tab-btn" data-tab="momo">Mobile Money (MoMo)</button>
-      <button class="tab-btn" data-tab="card">Card / Online</button>
-    </div>
-
-    <div class="tab-content" id="bank">
-      <div class="card">
-        <h4>Bank Details</h4>
-        <p><strong>Bank:</strong> GCB Bank Ghana</p>
-        <p><strong>Account Name:</strong> Pacesetters Foundation</p>
-        <p><strong>Account Number:</strong> 1234567890</p>
-        <p><strong>Branch:</strong> Accra Main</p>
-        <p>Use your name as reference and email proof of payment to <a href="mailto:email@example.com">email@example.com</a></p>
-      </div>
-    </div>
-
-    <div class="tab-content hidden" id="momo">
-      <div class="card">
-        <h4>Mobile Money</h4>
-        <p>Select your network to see the number to send to:</p>
-        <select id="momoNetwork">
-          <option value="">-- Select Network --</option>
-          <option value="MTN">MTN Mobile Money</option>
-          <option value="Vodafone">Vodafone Cash</option>
-          <option value="AirtelTigo">AirtelTigo Money</option>
-        </select>
-
-        <div id="momoDetails" style="margin-top:12px">
-          <!-- Will be populated by JS -->
-          <p class="muted">Pick a network to see the number and instructions.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="tab-content hidden" id="card">
-      <div class="card">
-        <h4>Card / Online Payment</h4>
-        <p>Use our secure online checkout to donate by Visa, Mastercard or mobile card.</p>
-        <!-- EDIT: Replace the href with your Paystack/Flutterwave checkout URL -->
-        <a id="payBtn" class="btn primary" href="#" target="_blank" rel="noopener">Donate Online (Paystack/Flutterwave)</a>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer"><div class="container footer-grid"><div><strong>Pacesetters Foundation</strong></div><div><small class="muted">© 2025</small></div></div></footer>
-
-  <button id="topBtn" title="Back to top">↑</button>
-  <script src="script.js"></script>
-
-  <script>
-    // Simple tab logic (also in script.js but keep local to ensure immediate functionality)
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabBtns.forEach(btn => btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const tab = btn.dataset.tab;
-      tabContents.forEach(c => c.id === tab ? c.classList.remove('hidden') : c.classList.add('hidden'));
-    }));
-
-    // MoMo networks data
-    const momoData = {
-      "MTN": {number:"+233 24 000 0001", name:"Pacesetters Foundation (MTN MoMo)"},
-      "Vodafone": {number:"+233 20 000 0002", name:"Pacesetters Foundation (Vodafone Cash)"},
-      "AirtelTigo": {number:"+233 24 000 0003", name:"Pacesetters Foundation (AirtelTigo Money)"}
-    };
-
-    const momoNetwork = document.getElementById('momoNetwork');
-    const momoDetails = document.getElementById('momoDetails');
-    momoNetwork.addEventListener('change', () => {
-      const v = momoNetwork.value;
-      if (!v) { momoDetails.innerHTML = '<p class="muted">Pick a network to see the number and instructions.</p>'; return; }
-      const data = momoData[v];
-      momoDetails.innerHTML = `<p><strong>${data.name}</strong></p><p>Number: <strong>${data.number}</strong></p><p>Send your donation and SMS proof to <a href="mailto:email@example.com">email@example.com</a> or upload proof via our contact page.</p>`;
-    });
-  </script>
-</body>
-</html>
-
+  <!-- Main content
