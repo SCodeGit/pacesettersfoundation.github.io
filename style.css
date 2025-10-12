@@ -1,3 +1,101 @@
+/* Base variables */
+:root {
+  --bg: #0e1620;         /* dark body background */
+  --paper: #0f1720;      /* slightly lighter cards */
+  --primary: #ffffff;     /* main text */
+  --accent: #f6b75e;      /* warm accent */
+  --muted: #98a3b3;       /* secondary text */
+  --text: #e6eef6;
+  --card: #0b1116;
+  --container: 1100px;
+  --radius: 12px;
+}
+
+/* Base reset */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color: var(--text);
+  background: linear-gradient(180deg,#07101a, #0d1a26);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.site-header {
+  background: rgba(6,10,18,0.6);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.header-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.brand { display: flex; gap: 12px; align-items: center; text-decoration: none; color: var(--text); }
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg,var(--accent),#d9a75e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #041027;
+}
+.org-name { font-size: 1rem; margin: 0; }
+.tagline { font-size: 12px; color: var(--muted); }
+
+/* Nav */
+.nav { display: flex; gap: 14px; align-items: center; }
+.nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+.nav a:hover { color: var(--accent); }
+.nav-toggle { display: none; background: transparent; border: 0; color: var(--text); font-size: 22px; cursor: pointer; }
+
+/* Hero */
+.hero { position: relative; height: 55vh; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom:1px solid rgba(255,255,255,0.02);}
+.hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.5) contrast(.95);}
+.hero-overlay { position:relative; z-index:2; text-align:center; padding:36px; }
+.hero-overlay h2 { font-size:2rem; margin:0 0 8px; color: var(--primary); }
+.hero-overlay p { color: var(--muted); margin-bottom:12px; }
+
+/* Sections */
+.section { padding:48px 0; }
+.pale { background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); }
+.section h2, .section h3 { color: var(--accent); }
+.lead { color: var(--muted); max-width: 760px; }
+
+/* Card & grid */
+.card { background: var(--card); padding: 18px; border-radius: var(--radius); box-shadow:0 8px 30px rgba(2,6,12,0.6); border:1px solid rgba(255,255,255,0.02);}
+.section-grid, .contact-grid { display: grid; grid-template-columns: 1fr 360px; gap: 28px; align-items: start; }
+@media(max-width:900px){ .section-grid, .contact-grid { grid-template-columns:1fr; } }
+
+/* Buttons */
+.btn { padding: 8px 12px; border-radius: 10px; border:0; cursor:pointer; font-weight:700; }
+.btn.primary { background: var(--accent); color: #041027; }
+.btn.ghost { background: transparent; border:1px solid rgba(255,255,255,0.06); color: var(--text); }
+.btn:hover { opacity: 0.85; }
+
+/* Back to top */
+#topBtn {
+  position: fixed; right:18px; bottom:18px; width:50px; height:50px; border-radius:50%; background:var(--accent); color:#041027; border:0; font-size:20px; display:none; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 10px 30px rgba(246,183,94,0.14);
+}
+
+/* Mobile responsiveness */
+@media(max-width:700px){
+  .nav { display:none; flex-direction:column; gap:12px; background:var(--bg); position:absolute; top:60px; right:20px; padding:12px; border-radius:10px;}
+  .nav.visible { display:flex; }
+  .nav-toggle { display:block; }
+  .hero { height:40vh; }
+  .hero-overlay h2 { font-size:1.25rem; }
+  .footer-grid { flex-direction: column; align-items:flex-start; }
+}
+
 /* Variables & base */
 :root{
   --bg:#0e1620; /* deep charcoal body background for sleek feel */
@@ -121,3 +219,4 @@ body{
   .hero-overlay h2{font-size:1.25rem}
   .footer-grid{flex-direction:column;align-items:flex-start}
 }
+
