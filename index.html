@@ -1,97 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pacesetters Foundation</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pacesetters Foundation — Home</title>
+  <meta name="description" content="Pacesetters Foundation - Empowering communities through education, health and livelihoods." />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <!-- Header (shared across pages) -->
   <header class="site-header">
-    <div class="container">
+    <div class="container header-row">
       <div class="brand">
         <div class="logo">PF</div>
-        <h1>Pacesetters Foundation</h1>
+        <div>
+          <h1 class="org-name">Pacesetters Foundation</h1>
+          <div class="tagline">Empowering communities across Ghana</div>
+        </div>
       </div>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#programs">Programs</a>
-        <a href="#impact">Impact</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <a class="donate" href="#donate">Donate</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="stakeholders.html">Stakeholders</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="donate.html" class="btn small">Donate</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
-    <div class="overlay">
-      <h2>Empowering generations through knowledge and compassion</h2>
-      <p>Creating opportunities, inspiring hope, and building sustainable communities across Ghana.</p>
-      <a href="#donate" class="btn">Donate Now</a>
-    </div>
-  </section>
-
-  <section id="about" class="container">
-    <h3>About Us</h3>
-    <p>Pacesetters Foundation is a non-profit organization committed to improving lives through education, health initiatives, and youth empowerment.</p>
-  </section>
-
-  <section id="programs" class="container">
-    <h3>Our Programs</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>Education Support</h4>
-        <p>Scholarships and resources for underprivileged students.</p>
-      </div>
-      <div class="card">
-        <h4>Health Outreach</h4>
-        <p>Community clinics and maternal care programs.</p>
-      </div>
-      <div class="card">
-        <h4>Youth Empowerment</h4>
-        <p>Training and mentorship for young leaders.</p>
+    <img src="images/hero.jpg" alt="Community outreach" class="hero-img">
+    <div class="hero-overlay container">
+      <h2 class="reveal">Transforming Lives Through Education & Community Action</h2>
+      <p class="reveal delay-1">Pacesetters Foundation supports schools, health outreach, and youth livelihoods across Ghana.</p>
+      <div class="hero-ctas reveal delay-2">
+        <a href="about.html" class="btn ghost">Learn More</a>
+        <a href="donate.html" class="btn primary">Donate Now</a>
       </div>
     </div>
   </section>
 
-  <section id="impact" class="container">
-    <h3>Our Impact</h3>
-    <div class="stats">
-      <div><strong>5000+</strong><br>Students Supported</div>
-      <div><strong>120</strong><br>Communities Reached</div>
-      <div><strong>350</strong><br>Volunteers Engaged</div>
+  <!-- Quick links / highlights -->
+  <main>
+    <section class="section container">
+      <div class="section-grid">
+        <div>
+          <h3>What We Do</h3>
+          <p class="lead">We design and implement measurable programs that improve access to education, health and sustainable livelihoods.</p>
+
+          <div class="grid three">
+            <article class="card reveal">
+              <h4>Education</h4>
+              <p>Scholarships, teacher training and resources for schools.</p>
+            </article>
+            <article class="card reveal delay-1">
+              <h4>Health</h4>
+              <p>Community screenings, maternal support and vaccinations.</p>
+            </article>
+            <article class="card reveal delay-2">
+              <h4>Livelihoods</h4>
+              <p>Vocational training, micro-grants and entrepreneurship support.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card stat-card reveal">
+            <div class="num" data-target="5000">0</div>
+            <div class="label">Students Supported</div>
+          </div>
+
+          <div class="card stat-card reveal delay-1">
+            <div class="num" data-target="120">0</div>
+            <div class="label">Communities Reached</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Profiles fly-in grid (small sample) -->
+    <section class="section pale">
+      <div class="container">
+        <h3>Our Team</h3>
+        <p class="lead">Small but dedicated team</p>
+
+        <div class="profiles-grid flight">
+          <!-- Replace images & names -->
+          <div class="profile-card reveal">
+            <img src="images/profile1.jpg" alt="Profile 1">
+            <div class="profile-body">
+              <strong>Jane Doe</strong>
+              <small>Executive Director</small>
+            </div>
+          </div>
+
+          <div class="profile-card reveal delay-1">
+            <img src="images/profile2.jpg" alt="Profile 2">
+            <div class="profile-body">
+              <strong>Kwame Mensah</strong>
+              <small>Programs Lead</small>
+            </div>
+          </div>
+
+          <div class="profile-card reveal delay-2">
+            <img src="images/profile3.jpg" alt="Profile 3">
+            <div class="profile-body">
+              <strong>Akua Adjei</strong>
+              <small>Operations</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section cta-dark">
+      <div class="container">
+        <div class="cta-grid">
+          <div>
+            <h3>Make a Difference Today</h3>
+            <p>Support our programs — your contribution helps build classrooms, fund scholarships and support health outreach.</p>
+          </div>
+          <div>
+            <a href="donate.html" class="btn primary large">Donate Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Pacesetters Foundation</strong><br>
+        <small class="muted">Empowering communities across Ghana</small>
+      </div>
+      <div>
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="programs.html">Programs</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <small class="muted">© 2025 Pacesetters Foundation — Built by SCode Studio</small>
+      </div>
     </div>
-  </section>
-
-  <section id="gallery" class="container">
-    <h3>Gallery</h3>
-    <div class="gallery">
-      <img src="images/hero.jpg" alt="Foundation image 1">
-      <img src="images/hero.jpg" alt="Foundation image 2">
-      <img src="images/hero.jpg" alt="Foundation image 3">
-    </div>
-  </section>
-
-  <section id="contact" class="container">
-    <h3>Contact & Support</h3>
-    <form action="mailto:email@example.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your name" required />
-      <input type="email" name="Email" placeholder="Your email" required />
-      <textarea name="Message" placeholder="Your message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-
-    <div id="donate" class="donate-section">
-      <h3>Donate Now</h3>
-      <p>Your support makes a difference. Every contribution helps us reach more communities.</p>
-      <a href="#" class="btn">Donate via Flutterwave / Paystack</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Pacesetters Foundation — Empowering Communities in Ghana</p>
   </footer>
+
+  <!-- Lightbox for gallery (shared) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="Close">✕</button>
+      <img src="" alt="Full" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- Back to top (static on all pages) -->
+  <button id="topBtn" title="Back to top">↑</button>
+
+  <!-- Shared scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
