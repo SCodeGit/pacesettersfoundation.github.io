@@ -185,4 +185,34 @@ ul{list-style:none;}
 @media(max-width:780px){
   .grid-2{grid-template-columns:1fr;}
 }
+/* ===== Developer Credit Signature ===== */
+.dev-link {
+  position: relative;
+  color: var(--silver);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dev-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--navy));
+  transition: width 0.4s ease;
+  border-radius: 2px;
+}
+
+.dev-link:hover {
+  color: var(--blue);
+  text-shadow: 0 0 8px rgba(30, 99, 211, 0.6);
+}
+
+.dev-link:hover::after {
+  width: 100%;
+}
+
 
