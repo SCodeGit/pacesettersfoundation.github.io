@@ -84,6 +84,105 @@ ul{list-style:none;}
 .delay-2{transition-delay:.3s;}
 
 /* Responsive grids */
+/* ===== Donation Page Tabs ===== */
+.donate-tabs {
+  background: var(--silver);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(11,29,75,0.1);
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+.tab-btn:hover {
+  background: var(--blue);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: var(--blue);
+  box-shadow: 0 4px 15px rgba(30,99,211,0.4);
+}
+
+.tab-content {
+  display: none;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1rem;
+  animation: fadeIn .4s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MoMo box styling */
+.momo-box {
+  background: var(--silver);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1rem;
+  color: var(--text);
+  box-shadow: 0 3px 12px rgba(11,29,75,0.1);
+}
+
+/* Contact form on donate page */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+#momo-select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+.map-box {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+
+/* Responsive tweaks */
+@media(max-width:700px){
+  .tab-buttons{flex-direction:column;}
+  .tab-btn{width:100%;}
+}
+
 @media(max-width:780px){
   .grid-2{grid-template-columns:1fr;}
 }
+
