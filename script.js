@@ -1,3 +1,21 @@
+// Mobile nav toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('visible');
+});
+
+// Back to top button
+const topBtn = document.getElementById('topBtn');
+window.onscroll = function() {
+  topBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? 'flex' : 'none';
+};
+
+topBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 // Simple selectors
 const q = (s, p=document) => p.querySelector(s);
 const qAll = (s, p=document) => Array.from(p.querySelectorAll(s));
@@ -102,3 +120,4 @@ try {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Tab') document.body.classList.add('show-focus');
 });
+
